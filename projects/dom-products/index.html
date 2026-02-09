@@ -97,6 +97,17 @@
         color: #a5b4fc;
         font-weight: bold;
       }
+
+      .delete-btn {
+        margin-top: 10px;
+        width: 100%;
+        background: #ef4444;
+        color: white;
+      }
+
+      .delete-btn:hover {
+        box-shadow: 0 6px 14px rgba(239, 68, 68, 0.4);
+      }
     </style>
   </head>
   <body>
@@ -120,20 +131,25 @@
       function renderProducts() {
         productList.innerHTML = "";
 
-        products.forEach((product) => {
+        products.forEach((product, index) => {
           const div = document.createElement("div");
           div.className = "card";
 
           div.innerHTML = `
-          <img src="${product.image}">
-          <h3>${product.title}</h3>
-          <p class="price">$${product.price}</p>
-        `;
+      <img src="${product.image}">
+      <h3>${product.title}</h3>
+      <p class="price">$${product.price}</p>
+      <button class="delete-btn">Delete</button>
+    `;
+
+          div.querySelector(".delete-btn").addEventListener("click", () => {
+            products.splice(index, 1);
+            renderProducts();
+          });
 
           productList.appendChild(div);
         });
       }
-
       form.addEventListener("submit", (e) => {
         e.preventDefault();
 
