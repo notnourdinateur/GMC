@@ -4,8 +4,6 @@ This is the submission for the "Responsive Store Landing Page Design" checkpoint
 
 ## 📸 Screenshots
 
-*(Replace the placeholders below with the actual screenshots of your desktop and mobile views)*
-
 ### Desktop View
 ![Desktop View Placeholder](screenshots/desktop.png)
 
