@@ -1,3 +1,8 @@
+/* ===============================================
+   AURA | X-Themed Minimalist CSS
+   =============================================== */
+
+/* --- 1. Variables (Colors, Spacing, Effects) --- */
 :root {
     --primary-color: #1d9bf0;
     --secondary-color: #eff3f4;
@@ -11,6 +16,7 @@
     --transition-speed: 0.2s;
 }
 
+/* --- 2. Base Styles --- */
 body {
     font-family: 'Outfit', sans-serif;
     background-color: var(--bg-color);
@@ -18,6 +24,7 @@ body {
     overflow-x: hidden;
 }
 
+/* --- 3. Utilities & Typography --- */
 .letter-spacing-2 {
     letter-spacing: 2px;
 }
@@ -32,6 +39,7 @@ body {
     display: inline-block;
 }
 
+/* --- 4. Buttons --- */
 .btn-primary {
     background-color: var(--primary-color);
     border: none;
@@ -66,6 +74,7 @@ body {
     color: #000;
 }
 
+/* --- 5. Glassmorphism Utilities --- */
 .bg-glass {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
@@ -77,6 +86,7 @@ body {
     border: 1px solid var(--glass-border) !important;
 }
 
+/* --- 6. Navigation Bar --- */
 .custom-nav {
     padding: 1.5rem 0;
     transition: all var(--transition-speed) ease;
@@ -111,6 +121,7 @@ body {
     width: 100%;
 }
 
+/* --- 7. Hero Section --- */
 .hero {
     min-height: 100vh;
     padding-top: 100px;
@@ -124,10 +135,12 @@ body {
     line-height: 1.1;
 }
 
+/* --- 8. Products Section --- */
 .products-section {
     position: relative;
 }
 
+/* --- 9. Product Cards --- */
 .product-card {
     border-radius: 16px;
     transition: border-color var(--transition-speed);
@@ -182,6 +195,7 @@ body {
     transition-delay: 0.1s;
 }
 
+/* --- 10. Footer --- */
 .footer {
     background-color: var(--bg-color);
     margin-top: 5rem;
@@ -215,6 +229,68 @@ body {
     background: var(--primary-color);
     border-color: var(--primary-color);
     transform: translateY(-3px);
+}
+
+/* --- 11. About Section --- */
+.about-section {
+    position: relative;
+}
+
+.about-stat {
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    background: var(--surface-color);
+    transition: border-color var(--transition-speed), transform var(--transition-speed);
+}
+.about-stat:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-4px);
+}
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+.stat-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.mission-card {
+    border: 1px solid var(--glass-border) !important;
+    transition: border-color var(--transition-speed), transform var(--transition-speed);
+}
+.mission-card:hover {
+    border-color: var(--primary-color) !important;
+    transform: translateY(-6px);
+}
+.mission-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: rgba(29, 155, 240, 0.12);
+    border: 1px solid rgba(29, 155, 240, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+
+.about-cta {
+    background: linear-gradient(135deg, rgba(29, 155, 240, 0.08), rgba(29, 155, 240, 0.02));
+    border: 1px solid rgba(29, 155, 240, 0.2);
+}
+.about-cta:hover {
+    border-color: rgba(29, 155, 240, 0.45);
+}
+
+/* --- 12. Section spacing utility --- */
+.py-6 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 /* Animations */
