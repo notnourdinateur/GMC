@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- ==================== HEADER ==================== -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <!-- Name / Logo -->
+          <a href="#" class="text-2xl font-bold text-teal-600"
+            >Noureddine Nafzaoui</a
+          >
+
+          <!-- Mobile menu button -->
+          <button
+            id="menu-btn"
+            class="md:hidden text-gray-600 hover:text-teal-600 focus:outline-none"
+          >
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+
+          <!-- Navigation -->
+          <nav
+            id="nav-menu"
+            class="hidden md:flex space-x-8 text-sm font-medium"
+          >
+            <a href="#hero" class="text-gray-600 hover:text-teal-600 transition"
+              >Home</a
+            >
+            <a
+              href="#skills"
+              class="text-gray-600 hover:text-teal-600 transition"
+              >Skills</a
+            >
+            <a
+              href="#projects"
+              class="text-gray-600 hover:text-teal-600 transition"
+              >Projects</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-600 hover:text-teal-600 transition"
+              >Contact</a
+            >
+          </nav>
+        </div>
+
+        <!-- Mobile Navigation (hidden by default) -->
+        <nav id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
+          <a
+            href="#hero"
+            class="block text-gray-600 hover:text-teal-600 transition"
+            >Home</a
+          >
+          <a
+            href="#skills"
+            class="block text-gray-600 hover:text-teal-600 transition"
+            >Skills</a
+          >
+          <a
+            href="#projects"
+            class="block text-gray-600 hover:text-teal-600 transition"
+            >Projects</a
+          >
+          <a
+            href="#contact"
+            class="block text-gray-600 hover:text-teal-600 transition"
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section
+      id="hero"
+      class="relative bg-cover bg-center bg-no-repeat h-[90vh] flex items-center"
+      style="
+        background-image: url(&quot;https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80&quot;);
+      "
+    >
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black/60"></div>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        <h1
+          class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-4"
+        >
+          Hi, I'm <span class="text-teal-400">Noureddine Nafzaoui</span>
+        </h1>
+        <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          A passionate full-stack web developer crafting beautiful, responsive,
+          and user-friendly digital experiences.
+        </p>
+        <a
+          href="#projects"
+          class="inline-block bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-3 rounded-full transition shadow-lg"
+        >
+          View My Work
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================== SKILLS SECTION ==================== -->
+    <section id="skills" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-4">My Skills</h2>
+        <p class="text-center text-gray-500 mb-12 max-w-xl mx-auto">
+          Technologies and tools I work with on a daily basis.
+        </p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+          <!-- Skill Card -->
+          <div
+            class="flex flex-col items-center p-6 bg-gray-50 rounded-xl shadow hover:shadow-md transition"
+          >
+            <i class="fab fa-html5 text-5xl text-orange-500 mb-3"></i>
+            <span class="font-medium">HTML5</span>
+          </div>
+          <div
+            class="flex flex-col items-center p-6 bg-gray-50 rounded-xl shadow hover:shadow-md transition"
+          >
+            <i class="fab fa-css3-alt text-5xl text-blue-500 mb-3"></i>
+            <span class="font-medium">CSS3</span>
+          </div>
+          <div
+            class="flex flex-col items-center p-6 bg-gray-50 rounded-xl shadow hover:shadow-md transition"
+          >
+            <i class="fab fa-js text-5xl text-yellow-400 mb-3"></i>
+            <span class="font-medium">JavaScript</span>
+          </div>
+          <div
+            class="flex flex-col items-center p-6 bg-gray-50 rounded-xl shadow hover:shadow-md transition"
+          >
+            <i class="fab fa-react text-5xl text-cyan-400 mb-3"></i>
+            <span class="font-medium">React</span>
+          </div>
+          <div
+            class="flex flex-col items-center p-6 bg-gray-50 rounded-xl shadow hover:shadow-md transition"
+          >
+            <i class="fab fa-node-js text-5xl text-green-600 mb-3"></i>
+            <span class="font-medium">Node.js</span>
+          </div>
+          <div
+            class="flex flex-col items-center p-6 bg-gray-50 rounded-xl shadow hover:shadow-md transition"
+          >
+            <i class="fab fa-python text-5xl text-blue-400 mb-3"></i>
+            <span class="font-medium">Python</span>
+          </div>
+          <div
+            class="flex flex-col items-center p-6 bg-gray-50 rounded-xl shadow hover:shadow-md transition"
+          >
+            <i class="fab fa-git-alt text-5xl text-red-500 mb-3"></i>
+            <span class="font-medium">Git</span>
+          </div>
+          <div
+            class="flex flex-col items-center p-6 bg-gray-50 rounded-xl shadow hover:shadow-md transition"
+          >
+            <i class="fas fa-database text-5xl text-teal-500 mb-3"></i>
+            <span class="font-medium">Databases</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section id="projects" class="py-20 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-4">Projects</h2>
+        <p class="text-center text-gray-500 mb-12 max-w-xl mx-auto">
+          A selection of recent work I'm proud of.
+        </p>
+
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Project Card 1 -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80"
+              alt="Project 1"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">E-Commerce Platform</h3>
+              <p class="text-gray-500 text-sm mb-4">
+                A full-stack online store built with React, Node.js, and MongoDB
+                featuring cart, checkout, and payment integration.
+              </p>
+              <a
+                href="#"
+                class="text-teal-600 font-medium hover:underline text-sm"
+                >View Project &rarr;</a
+              >
+            </div>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80"
+              alt="Project 2"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Task Manager App</h3>
+              <p class="text-gray-500 text-sm mb-4">
+                A productivity application with drag-and-drop boards, real-time
+                collaboration, and user authentication.
+              </p>
+              <a
+                href="#"
+                class="text-teal-600 font-medium hover:underline text-sm"
+                >View Project &rarr;</a
+              >
+            </div>
+          </div>
+
+          <!-- Project Card 3 -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80"
+              alt="Project 3"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Analytics Dashboard</h3>
+              <p class="text-gray-500 text-sm mb-4">
+                Interactive data visualization dashboard with charts, filters,
+                and real-time data updates using D3.js.
+              </p>
+              <a
+                href="#"
+                class="text-teal-600 font-medium hover:underline text-sm"
+                >View Project &rarr;</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT FORM ==================== -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-4">Get In Touch</h2>
+        <p class="text-center text-gray-500 mb-12 max-w-xl mx-auto">
+          Have a project in mind? Let's talk about it.
+        </p>
+
+        <form class="space-y-6">
+          <div class="grid gap-6 sm:grid-cols-2">
+            <div>
+              <label
+                for="name"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Name</label
+              >
+              <input
+                id="name"
+                type="text"
+                placeholder="Your name"
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition"
+              />
+            </div>
+            <div>
+              <label
+                for="email"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Email</label
+              >
+              <input
+                id="email"
+                type="email"
+                placeholder="you@example.com"
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label
+              for="message"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >Message</label
+            >
+            <textarea
+              id="message"
+              rows="5"
+              placeholder="Tell me about your project..."
+              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition resize-none"
+            ></textarea>
+          </div>
+
+          <div class="text-center">
+            <button
+              type="submit"
+              class="bg-teal-600 hover:bg-teal-700 text-white font-semibold px-10 py-3 rounded-full transition shadow-lg"
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-gray-900 text-gray-400 py-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-6"
+        >
+          <!-- Social Icons -->
+          <div class="flex space-x-6 text-xl">
+            <a href="#" class="hover:text-white transition"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="#" class="hover:text-white transition"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="#" class="hover:text-white transition"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="hover:text-white transition"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+
+          <!-- Copyright -->
+          <p class="text-sm">
+            &copy; 2026 Noureddine Nafzaoui. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile menu toggle script -->
+    <script>
+      document.getElementById("menu-btn").addEventListener("click", () => {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

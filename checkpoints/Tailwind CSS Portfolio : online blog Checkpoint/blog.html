@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Daily Read — Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- ==================== HEADER ==================== -->
+    <header class="bg-teal-700 text-white sticky top-0 z-50 shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <!-- Blog Logo / Name -->
+          <a href="#" class="flex items-center space-x-2">
+            <i class="fas fa-book-open text-2xl text-teal-200"></i>
+            <span class="text-xl font-bold tracking-wide">The Daily Read</span>
+          </a>
+
+          <!-- Mobile menu button -->
+          <button
+            id="blog-menu-btn"
+            class="md:hidden text-teal-200 hover:text-white focus:outline-none"
+          >
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+
+          <!-- Navigation -->
+          <nav class="hidden md:flex space-x-8 text-sm font-medium">
+            <a
+              href="#featured"
+              class="text-teal-200 hover:text-white transition"
+              >Featured</a
+            >
+            <a
+              href="#categories"
+              class="text-teal-200 hover:text-white transition"
+              >Categories</a
+            >
+            <a href="#recent" class="text-teal-200 hover:text-white transition"
+              >Recent Posts</a
+            >
+            <a
+              href="#newsletter"
+              class="text-teal-200 hover:text-white transition"
+              >Newsletter</a
+            >
+          </nav>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav id="blog-mobile-menu" class="hidden md:hidden pb-4 space-y-2">
+          <a
+            href="#featured"
+            class="block text-teal-200 hover:text-white transition"
+            >Featured</a
+          >
+          <a
+            href="#categories"
+            class="block text-teal-200 hover:text-white transition"
+            >Categories</a
+          >
+          <a
+            href="#recent"
+            class="block text-teal-200 hover:text-white transition"
+            >Recent Posts</a
+          >
+          <a
+            href="#newsletter"
+            class="block text-teal-200 hover:text-white transition"
+            >Newsletter</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- ==================== HERO / BANNER ==================== -->
+    <section class="bg-teal-600 text-white py-16 sm:py-24">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">
+          Welcome to The Daily Read
+        </h1>
+        <p class="text-teal-200 text-lg sm:text-xl max-w-2xl mx-auto">
+          Discover insightful articles on technology, design, and everything in
+          between.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== FEATURED POSTS ==================== -->
+    <section id="featured" class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-4">Featured Posts</h2>
+        <p class="text-center text-gray-500 mb-12 max-w-xl mx-auto">
+          Hand-picked articles we think you'll love.
+        </p>
+
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Featured Post 1 -->
+          <article
+            class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80"
+              alt="Tech workspace"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <span
+                class="text-xs font-semibold uppercase tracking-wide text-teal-600"
+                >Technology</span
+              >
+              <h3 class="text-xl font-semibold mt-2 mb-2">
+                The Future of AI in Web Development
+              </h3>
+              <p class="text-gray-500 text-sm mb-4">
+                Explore how artificial intelligence is transforming the way we
+                build and interact with websites and applications.
+              </p>
+              <a
+                href="#"
+                class="text-teal-600 font-medium hover:underline text-sm"
+                >Read More &rarr;</a
+              >
+            </div>
+          </article>
+
+          <!-- Featured Post 2 -->
+          <article
+            class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=600&q=80"
+              alt="Writing desk"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <span
+                class="text-xs font-semibold uppercase tracking-wide text-emerald-600"
+                >Productivity</span
+              >
+              <h3 class="text-xl font-semibold mt-2 mb-2">
+                10 Habits of Highly Effective Developers
+              </h3>
+              <p class="text-gray-500 text-sm mb-4">
+                Discover the daily routines and practices that set
+                top-performing developers apart from the rest.
+              </p>
+              <a
+                href="#"
+                class="text-teal-600 font-medium hover:underline text-sm"
+                >Read More &rarr;</a
+              >
+            </div>
+          </article>
+
+          <!-- Featured Post 3 -->
+          <article
+            class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=600&q=80"
+              alt="Design tools"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <span
+                class="text-xs font-semibold uppercase tracking-wide text-pink-600"
+                >Design</span
+              >
+              <h3 class="text-xl font-semibold mt-2 mb-2">
+                Mastering UI/UX: A Beginner's Guide
+              </h3>
+              <p class="text-gray-500 text-sm mb-4">
+                A comprehensive introduction to user interface and user
+                experience design principles for newcomers.
+              </p>
+              <a
+                href="#"
+                class="text-teal-600 font-medium hover:underline text-sm"
+                >Read More &rarr;</a
+              >
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CATEGORIES SECTION ==================== -->
+    <section id="categories" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-4">Categories</h2>
+        <p class="text-center text-gray-500 mb-10 max-w-xl mx-auto">
+          Browse articles by topic.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-3">
+          <a
+            href="#"
+            class="inline-block bg-teal-100 text-teal-700 px-5 py-2 rounded-full text-sm font-medium hover:bg-teal-200 transition"
+          >
+            <i class="fas fa-laptop-code mr-1"></i> Technology
+          </a>
+          <a
+            href="#"
+            class="inline-block bg-emerald-100 text-emerald-700 px-5 py-2 rounded-full text-sm font-medium hover:bg-emerald-200 transition"
+          >
+            <i class="fas fa-chart-line mr-1"></i> Productivity
+          </a>
+          <a
+            href="#"
+            class="inline-block bg-pink-100 text-pink-700 px-5 py-2 rounded-full text-sm font-medium hover:bg-pink-200 transition"
+          >
+            <i class="fas fa-palette mr-1"></i> Design
+          </a>
+          <a
+            href="#"
+            class="inline-block bg-amber-100 text-amber-700 px-5 py-2 rounded-full text-sm font-medium hover:bg-amber-200 transition"
+          >
+            <i class="fas fa-lightbulb mr-1"></i> Tutorials
+          </a>
+          <a
+            href="#"
+            class="inline-block bg-cyan-100 text-cyan-700 px-5 py-2 rounded-full text-sm font-medium hover:bg-cyan-200 transition"
+          >
+            <i class="fas fa-briefcase mr-1"></i> Career
+          </a>
+          <a
+            href="#"
+            class="inline-block bg-purple-100 text-purple-700 px-5 py-2 rounded-full text-sm font-medium hover:bg-purple-200 transition"
+          >
+            <i class="fas fa-code mr-1"></i> Programming
+          </a>
+          <a
+            href="#"
+            class="inline-block bg-rose-100 text-rose-700 px-5 py-2 rounded-full text-sm font-medium hover:bg-rose-200 transition"
+          >
+            <i class="fas fa-heart mr-1"></i> Lifestyle
+          </a>
+          <a
+            href="#"
+            class="inline-block bg-teal-100 text-teal-700 px-5 py-2 rounded-full text-sm font-medium hover:bg-teal-200 transition"
+          >
+            <i class="fas fa-shield-halved mr-1"></i> Security
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== RECENT POSTS SECTION ==================== -->
+    <section id="recent" class="py-20 bg-gray-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-4">Recent Posts</h2>
+        <p class="text-center text-gray-500 mb-12 max-w-xl mx-auto">
+          Stay up to date with our latest articles.
+        </p>
+
+        <div class="space-y-6">
+          <!-- Recent Post 1 -->
+          <a
+            href="#"
+            class="flex flex-col sm:flex-row items-start gap-4 bg-white p-5 rounded-xl shadow hover:shadow-md transition group"
+          >
+            <div class="flex-shrink-0 w-full sm:w-auto">
+              <span
+                class="inline-block bg-teal-100 text-teal-600 text-xs font-bold px-3 py-1 rounded-full"
+                >Mar 10, 2026</span
+              >
+            </div>
+            <div>
+              <h3
+                class="text-lg font-semibold group-hover:text-teal-600 transition"
+              >
+                Understanding CSS Container Queries
+              </h3>
+              <p class="text-gray-500 text-sm mt-1">
+                A deep dive into the new CSS feature that lets components
+                respond to their container size instead of the viewport.
+              </p>
+            </div>
+          </a>
+
+          <!-- Recent Post 2 -->
+          <a
+            href="#"
+            class="flex flex-col sm:flex-row items-start gap-4 bg-white p-5 rounded-xl shadow hover:shadow-md transition group"
+          >
+            <div class="flex-shrink-0 w-full sm:w-auto">
+              <span
+                class="inline-block bg-emerald-100 text-emerald-600 text-xs font-bold px-3 py-1 rounded-full"
+                >Mar 7, 2026</span
+              >
+            </div>
+            <div>
+              <h3
+                class="text-lg font-semibold group-hover:text-teal-600 transition"
+              >
+                Getting Started with Deno 2.0
+              </h3>
+              <p class="text-gray-500 text-sm mt-1">
+                Everything you need to know about the latest major release of
+                the Deno runtime and its new features.
+              </p>
+            </div>
+          </a>
+
+          <!-- Recent Post 3 -->
+          <a
+            href="#"
+            class="flex flex-col sm:flex-row items-start gap-4 bg-white p-5 rounded-xl shadow hover:shadow-md transition group"
+          >
+            <div class="flex-shrink-0 w-full sm:w-auto">
+              <span
+                class="inline-block bg-pink-100 text-pink-600 text-xs font-bold px-3 py-1 rounded-full"
+                >Mar 4, 2026</span
+              >
+            </div>
+            <div>
+              <h3
+                class="text-lg font-semibold group-hover:text-teal-600 transition"
+              >
+                Design Systems: Why Every Team Needs One
+              </h3>
+              <p class="text-gray-500 text-sm mt-1">
+                How a well-structured design system can improve consistency,
+                speed up development, and reduce tech debt.
+              </p>
+            </div>
+          </a>
+
+          <!-- Recent Post 4 -->
+          <a
+            href="#"
+            class="flex flex-col sm:flex-row items-start gap-4 bg-white p-5 rounded-xl shadow hover:shadow-md transition group"
+          >
+            <div class="flex-shrink-0 w-full sm:w-auto">
+              <span
+                class="inline-block bg-amber-100 text-amber-600 text-xs font-bold px-3 py-1 rounded-full"
+                >Mar 1, 2026</span
+              >
+            </div>
+            <div>
+              <h3
+                class="text-lg font-semibold group-hover:text-teal-600 transition"
+              >
+                Building Accessible Forms: Best Practices
+              </h3>
+              <p class="text-gray-500 text-sm mt-1">
+                Learn how to create forms that are inclusive and usable by
+                everyone, including users with assistive technologies.
+              </p>
+            </div>
+          </a>
+
+          <!-- Recent Post 5 -->
+          <a
+            href="#"
+            class="flex flex-col sm:flex-row items-start gap-4 bg-white p-5 rounded-xl shadow hover:shadow-md transition group"
+          >
+            <div class="flex-shrink-0 w-full sm:w-auto">
+              <span
+                class="inline-block bg-cyan-100 text-cyan-600 text-xs font-bold px-3 py-1 rounded-full"
+                >Feb 26, 2026</span
+              >
+            </div>
+            <div>
+              <h3
+                class="text-lg font-semibold group-hover:text-teal-600 transition"
+              >
+                From Junior to Senior: A Roadmap for Developers
+              </h3>
+              <p class="text-gray-500 text-sm mt-1">
+                Practical steps and mindset shifts that can help you accelerate
+                your growth in the software engineering career ladder.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== NEWSLETTER SUBSCRIPTION ==================== -->
+    <section id="newsletter" class="py-20 bg-teal-600">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold text-white mb-4">
+          Subscribe to Our Newsletter
+        </h2>
+        <p class="text-teal-200 mb-8 max-w-xl mx-auto">
+          Get the latest articles, tutorials, and updates delivered straight to
+          your inbox. No spam, ever.
+        </p>
+
+        <form
+          class="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto"
+        >
+          <input
+            type="email"
+            placeholder="Enter your email address"
+            class="flex-1 px-5 py-3 rounded-full border-2 border-transparent focus:border-white focus:ring-0 outline-none text-gray-800 placeholder-gray-400"
+          />
+          <button
+            type="submit"
+            class="bg-white text-teal-600 font-semibold px-8 py-3 rounded-full hover:bg-teal-50 transition shadow-lg"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-gray-900 text-gray-400 py-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-6"
+        >
+          <!-- Footer Links -->
+          <div class="flex flex-wrap justify-center gap-6 text-sm">
+            <a href="#" class="hover:text-white transition">About</a>
+            <a href="#" class="hover:text-white transition">Privacy Policy</a>
+            <a href="#" class="hover:text-white transition">Terms of Service</a>
+            <a href="#" class="hover:text-white transition">Contact</a>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="flex space-x-6 text-xl">
+            <a href="#" class="hover:text-white transition"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="hover:text-white transition"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" class="hover:text-white transition"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="hover:text-white transition"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="#" class="hover:text-white transition"
+              ><i class="fab fa-rss"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="mt-8 text-center text-sm text-gray-500">
+          &copy; 2026 The Daily Read. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile menu toggle script -->
+    <script>
+      document.getElementById("blog-menu-btn").addEventListener("click", () => {
+        document.getElementById("blog-mobile-menu").classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
