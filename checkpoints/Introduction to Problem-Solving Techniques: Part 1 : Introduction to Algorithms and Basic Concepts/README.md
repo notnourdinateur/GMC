@@ -6,11 +6,10 @@ checkpoint — Insertion Sort algorithm in JavaScript.
 
 Insertion sort works like sorting playing cards in your hand: you pick each new card and place it in the right spot among the ones already sorted.
 
-## Counter variables
+## Counters
 
-- `i` — index of the element being inserted
-- `j` — index used to scan the sorted part of the array
-- `comparisons` — counts how many comparisons are made
+- `i` — outer loop, walks through the unsorted part of the array
+- `j` — inner loop, scans the sorted part to find the right position
 
 ## How to run
 
