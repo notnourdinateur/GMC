@@ -1,37 +1,27 @@
-# Algorithms and its Elements — Sentence Analyzer
+# Sorting and Searching Algorithms — Insertion Sort
 
-GoMyCode checkpoint — read a sentence character by character and analyze it.
+GoMyCode checkpoint — Insertion Sort algorithm in JavaScript.
 
 ## About
 
-This program reads a sentence (ending with a point `.`) character by character and determines:
-
-- The length of the sentence (number of characters)
-- The number of words (separated by a single space)
-- The number of vowels
+Insertion sort works like sorting playing cards in your hand: you pick each new card and place it in the right spot among the ones already sorted.
 
 ## Counters
 
-- `length` — counts the total number of characters
-- `words` — counts the number of words
-- `vowels` — counts the number of vowels (a, e, i, o, u)
+- `i` — outer loop, walks through the unsorted part of the array
+- `j` — inner loop, scans the sorted part to find the right position
 
 ## How to run
 
 ```bash
-node sentenceAnalyzer.js
+node insertionSort.js
 ```
 
-Then type a sentence ending with a point and press Enter.
+## Complexity
 
-### Example
-
-```
-Enter a sentence ending with a point: Hello world this is a test.
-Length : 27
-Words  : 6
-Vowels : 7
-```
+- Best case: O(n)
+- Average / Worst case: O(n²)
+- Space: O(1)
 
 ## Author
 
