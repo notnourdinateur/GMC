@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaCart — Shopping Cart</title>
+
+  <!--
+    External icon toolkit: Font Awesome (loaded from a CDN).
+    It provides the heart, trash, plus and minus glyphs used across the cart,
+    so we never have to ship our own image assets for the controls.
+  -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <!-- Google Font for a slightly more polished, branded look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ===================== HEADER ===================== -->
+  <header class="topbar">
+    <h1 class="brand">
+      <i class="fa-solid fa-bag-shopping"></i> NovaCart
+    </h1>
+    <p class="tagline">Review your selection before checkout</p>
+  </header>
+
+  <!-- ===================== MAIN LAYOUT ===================== -->
+  <main class="layout">
+    <!--
+      The list of products. Each .cart-item carries a data-price attribute
+      so the JavaScript always knows the *unit* price of the row, no matter
+      how many times the quantity changes.
+    -->
+    <section class="cart" aria-label="Items in your cart">
+
+      <!-- ---------- Item 1 ---------- -->
+      <article class="cart-item" data-price="120">
+        <img
+          class="item-img"
+          src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&q=80"
+          alt="Red running sneakers"
+        />
+
+        <div class="item-info">
+          <h2 class="item-name">Nova Runner Sneakers</h2>
+          <p class="item-cat">Footwear</p>
+          <!-- Like / favourite button (heart toggles colour when clicked) -->
+          <button class="like-btn" aria-label="Add to favourites">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+
+        <!-- Quantity stepper -->
+        <div class="qty">
+          <button class="qty-btn minus" aria-label="Decrease quantity">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+          <span class="qty-value">1</span>
+          <button class="qty-btn plus" aria-label="Increase quantity">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+
+        <!-- Line total for this single item (unit price × quantity) -->
+        <div class="item-total">$120.00</div>
+
+        <!-- Remove the whole row from the cart -->
+        <button class="delete-btn" aria-label="Remove item">
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
+      </article>
+
+      <!-- ---------- Item 2 ---------- -->
+      <article class="cart-item" data-price="75">
+        <img
+          class="item-img"
+          src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=200&q=80"
+          alt="White cotton t-shirt"
+        />
+
+        <div class="item-info">
+          <h2 class="item-name">Essential Cotton Tee</h2>
+          <p class="item-cat">Apparel</p>
+          <button class="like-btn" aria-label="Add to favourites">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+
+        <div class="qty">
+          <button class="qty-btn minus" aria-label="Decrease quantity">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+          <span class="qty-value">1</span>
+          <button class="qty-btn plus" aria-label="Increase quantity">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+
+        <div class="item-total">$75.00</div>
+
+        <button class="delete-btn" aria-label="Remove item">
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
+      </article>
+
+      <!-- ---------- Item 3 ---------- -->
+      <article class="cart-item" data-price="220">
+        <img
+          class="item-img"
+          src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=200&q=80"
+          alt="Black sunglasses"
+        />
+
+        <div class="item-info">
+          <h2 class="item-name">Eclipse Sunglasses</h2>
+          <p class="item-cat">Accessories</p>
+          <button class="like-btn" aria-label="Add to favourites">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+
+        <div class="qty">
+          <button class="qty-btn minus" aria-label="Decrease quantity">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+          <span class="qty-value">1</span>
+          <button class="qty-btn plus" aria-label="Increase quantity">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+
+        <div class="item-total">$220.00</div>
+
+        <button class="delete-btn" aria-label="Remove item">
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
+      </article>
+
+      <!-- ---------- Item 4 ---------- -->
+      <article class="cart-item" data-price="49">
+        <img
+          class="item-img"
+          src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=200&q=80"
+          alt="Pair of casual shoes"
+        />
+
+        <div class="item-info">
+          <h2 class="item-name">Daily Canvas Shoes</h2>
+          <p class="item-cat">Footwear</p>
+          <button class="like-btn" aria-label="Add to favourites">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+
+        <div class="qty">
+          <button class="qty-btn minus" aria-label="Decrease quantity">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+          <span class="qty-value">1</span>
+          <button class="qty-btn plus" aria-label="Increase quantity">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+
+        <div class="item-total">$49.00</div>
+
+        <button class="delete-btn" aria-label="Remove item">
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
+      </article>
+
+      <!-- Message shown only when every item has been deleted -->
+      <p class="empty-msg" hidden>
+        <i class="fa-solid fa-cart-flatbed"></i> Your cart is empty.
+      </p>
+    </section>
+
+    <!-- ===================== SUMMARY ===================== -->
+    <aside class="summary" aria-label="Order summary">
+      <h2>Order Summary</h2>
+
+      <div class="summary-row">
+        <span>Items liked</span>
+        <span class="liked-count">0</span>
+      </div>
+
+      <div class="summary-row total-row">
+        <span>Total</span>
+        <!-- The grand total, recalculated by JS on every change -->
+        <span class="grand-total">$0.00</span>
+      </div>
+
+      <button class="checkout-btn">
+        <i class="fa-solid fa-lock"></i> Checkout
+      </button>
+    </aside>
+  </main>
+
+  <!-- All the interactivity lives here -->
+  <script src="script.js"></script>
+</body>
+</html>

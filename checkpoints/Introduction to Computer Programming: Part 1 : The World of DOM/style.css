@@ -1,0 +1,272 @@
+/* =====================================================================
+   NovaCart — Shopping Cart styles
+   Design goals: clean card layout, soft shadows, a calm purple accent,
+   and clear hover/active feedback on every interactive control.
+   ===================================================================== */
+
+/* ---- Design tokens (one place to tweak the whole theme) ---- */
+:root {
+  --accent: #6c5ce7;          /* main brand colour            */
+  --accent-dark: #5848c2;     /* darker accent for hovers     */
+  --like: #e84393;            /* heart colour when liked      */
+  --danger: #ff7675;          /* delete button colour         */
+  --bg: #f4f5fb;              /* page background              */
+  --card: #ffffff;            /* card surface                 */
+  --text: #2d3436;            /* primary text                 */
+  --muted: #9aa0b5;           /* secondary / muted text       */
+  --radius: 16px;             /* shared corner radius         */
+  --shadow: 0 10px 30px rgba(108, 92, 231, 0.10);
+}
+
+/* ---- Reset ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 32px 16px 64px;
+}
+
+/* ---- Header ---- */
+.topbar {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.brand {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.tagline {
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* ---- Two-column responsive layout ---- */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* On narrow screens the summary drops below the list */
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Cart list ---- */
+.cart {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* A single product row */
+.cart-item {
+  display: grid;
+  grid-template-columns: 80px 1fr auto auto auto;
+  align-items: center;
+  gap: 18px;
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(108, 92, 231, 0.16);
+}
+
+/* Smooth fade/slide used when a row is removed (added via JS) */
+.cart-item.removing {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.item-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.item-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.item-cat {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+/* ---- Like / heart button ---- */
+.like-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.15rem;
+  color: var(--muted);
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.like-btn:hover {
+  transform: scale(1.2);
+}
+
+/* "liked" state is toggled by JS — turns the heart pink and fills it */
+.like-btn.liked {
+  color: var(--like);
+}
+
+/* A tiny pop animation each time an item is liked */
+.like-btn.pop {
+  animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}
+
+/* ---- Quantity stepper ---- */
+.qty {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg);
+  border-radius: 999px;
+  padding: 6px 10px;
+}
+
+.qty-btn {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.75rem;
+  display: grid;
+  place-items: center;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.qty-btn:hover {
+  background: var(--accent-dark);
+}
+
+.qty-btn:active {
+  transform: scale(0.9);
+}
+
+.qty-value {
+  min-width: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* ---- Per-item total ---- */
+.item-total {
+  font-weight: 600;
+  color: var(--accent);
+  min-width: 80px;
+  text-align: right;
+}
+
+/* ---- Delete button ---- */
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.05rem;
+  color: var(--danger);
+  transition: transform 0.15s ease;
+}
+
+.delete-btn:hover {
+  transform: scale(1.2) rotate(8deg);
+}
+
+/* ---- Empty cart message ---- */
+.empty-msg {
+  text-align: center;
+  color: var(--muted);
+  padding: 40px 0;
+  font-size: 1.1rem;
+}
+
+/* ---- Summary card ---- */
+.summary {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 24px;
+}
+
+.summary h2 {
+  margin-bottom: 18px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  color: var(--muted);
+}
+
+.total-row {
+  border-top: 2px dashed #e3e3ef;
+  margin-top: 8px;
+  padding-top: 16px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.grand-total {
+  color: var(--accent);
+}
+
+.checkout-btn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.checkout-btn:hover {
+  background: var(--accent-dark);
+}
+
+.checkout-btn:active {
+  transform: scale(0.98);
+}
